@@ -1,0 +1,36 @@
+# This file was created Sat Apr 25 17:36:14 2020
+# Created by:
+#                       :-) GROMACS - gmx tcaf, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/Field-Big/0.377/a2/V11
+# Command line:
+#   gmx tcaf -f NVT_vis.trr -s NVT_vis.tpr -normalize -b 40000 -ov LL_16000.xvg
+# gmx tcaf is part of G R O M A C S:
+#
+# Giant Rising Ordinary Mutants for A Clerical Setup
+#
+@    title "Fits"
+@    xaxis  label "k (nm\S-1\N)"
+@    yaxis  label "\xh\f{} (10\S-3\N kg m\S-1\N s\S-1\N)"
+@TYPE xy
+@    s0 symbol 2
+@    s0 symbol color 1
+@    s0 linestyle 0
+ 0.477 0.015696
+ 0.477 0.0157768
+ 0.477 0.0152627
+ 0.674 0.0149759
+ 0.674 0.0152523
+ 0.674 0.0149518
+ 0.674 0.015092
+ 0.674 0.0146458
+ 0.674 0.0146376
+ 0.826 0.0142683
+ 0.826 0.0145227
+ 0.826 0.0142921
+ 0.826 0.0144122
+ 0.953 0.0138838
+ 0.953 0.0132504
+ 0.953 0.0135843

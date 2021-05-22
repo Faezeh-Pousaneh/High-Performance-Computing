@@ -1,0 +1,36 @@
+# This file was created Sun Sep 15 05:22:00 2019
+# Created by:
+#                       :-) GROMACS - gmx tcaf, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/DHS/0.644/V24
+# Command line:
+#   gmx tcaf -f NVT_vis.trr -s NVT_vis.tpr -normalize -b 10000 -ov LL_4000.xvg
+# gmx tcaf is part of G R O M A C S:
+#
+# Great Red Owns Many ACres of Sand 
+#
+@    title "Fits"
+@    xaxis  label "k (nm\S-1\N)"
+@    yaxis  label "\xh\f{} (10\S-3\N kg m\S-1\N s\S-1\N)"
+@TYPE xy
+@    s0 symbol 2
+@    s0 symbol color 1
+@    s0 linestyle 0
+ 1.587 0.16998
+ 1.587 0.171269
+ 1.587 0.171738
+ 2.244 0.162211
+ 2.244 0.162219
+ 2.244 0.160888
+ 2.244 0.161327
+ 2.244 0.161917
+ 2.244 0.16292
+ 2.748 0.154811
+ 2.748 0.154293
+ 2.748 0.154627
+ 2.748 0.155072
+ 3.173 0.148534
+ 3.173 0.147255
+ 3.173 0.14916

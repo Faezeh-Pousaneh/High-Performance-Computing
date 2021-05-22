@@ -1,0 +1,28 @@
+# This file was created Sat Aug 10 13:54:45 2019
+# Created by:
+#                     :-) GROMACS - gmx dipoles, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/DHS/0.370/V0
+# Command line:
+#   gmx dipoles -f NVT_e.xtc -s NVT_e.tpr
+# gmx dipoles is part of G R O M A C S:
+#
+# Giant Rising Ordinary Mutants for A Clerical Setup
+#
+@    title "Total dipole moment"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "D"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "< |M|\S2\N >"
+@ s1 legend "< |M| >\S2\N"
+@ s2 legend "< |M|\S2\N > - < |M| >\S2\N"
+@ s3 legend "< |M| >\S2\N / < |M|\S2\N >"
+         0   5.539e+03  5.539e+03  0.000e+00  1.000e+00

@@ -1,0 +1,74 @@
+# This file was created Sun Sep 15 18:23:43 2019
+# Created by:
+#                     :-) GROMACS - gmx density, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/DHS/0.644/V23
+# Command line:
+#   gmx density -f NVT.xtc -s NVT.tpr -dens num -b 400000
+# gmx density is part of G R O M A C S:
+#
+# Gyas ROwers Mature At Cryogenic Speed
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Number density (nm\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+      0.0376          97.1173
+      0.1128           93.884
+       0.188          91.7088
+      0.2632          90.7682
+      0.3384          89.7688
+      0.4136          102.055
+      0.4888          90.8858
+       0.564          94.5306
+      0.6392          92.2967
+      0.7144          98.5282
+      0.7896          95.2361
+      0.8648          87.5937
+        0.94          97.5876
+      1.0152          92.3555
+      1.0904          89.2985
+      1.1656          95.1185
+      1.2408          94.1191
+       1.316          94.0015
+      1.3912          95.8827
+      1.4664          93.3549
+      1.5416          95.0597
+      1.6168           95.824
+       1.692          87.9464
+      1.7672          95.1185
+      1.8424          97.1761
+      1.9176          93.0609
+      1.9928          93.2373
+       2.068            93.59
+      2.1432          94.9421
+      2.2184          98.4106
+      2.2936          92.1791
+      2.3688          89.0046
+       2.444            99.41
+      2.5192          92.7082
+      2.5944          89.1222
+      2.6696          94.0015
+      2.7448          96.0003
+        2.82          96.4706
+      2.8952          89.4749
+      2.9704          98.3518
+      3.0456          95.5888
+      3.1208          97.5876
+       3.196          91.2973
+      3.2712          96.1767
+      3.3464          97.9991
+      3.4216          91.2973
+      3.4968          93.6488
+       3.572            91.65
+      3.6472          93.7076
+      3.7224          96.8821

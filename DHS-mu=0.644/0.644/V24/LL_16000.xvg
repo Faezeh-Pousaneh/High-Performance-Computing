@@ -1,0 +1,36 @@
+# This file was created Sun Sep 15 06:50:22 2019
+# Created by:
+#                       :-) GROMACS - gmx tcaf, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/DHS/0.644/V24
+# Command line:
+#   gmx tcaf -f NVT_vis.trr -s NVT_vis.tpr -normalize -b 40000 -ov LL_16000.xvg
+# gmx tcaf is part of G R O M A C S:
+#
+# Gyas ROwers Mature At Cryogenic Speed
+#
+@    title "Fits"
+@    xaxis  label "k (nm\S-1\N)"
+@    yaxis  label "\xh\f{} (10\S-3\N kg m\S-1\N s\S-1\N)"
+@TYPE xy
+@    s0 symbol 2
+@    s0 symbol color 1
+@    s0 linestyle 0
+ 1.587 0.172349
+ 1.587 0.171982
+ 1.587 0.174274
+ 2.244 0.162477
+ 2.244 0.161899
+ 2.244 0.161013
+ 2.244 0.161597
+ 2.244 0.162852
+ 2.244 0.163677
+ 2.748 0.155087
+ 2.748 0.155221
+ 2.748 0.154837
+ 2.748 0.155763
+ 3.173 0.148841
+ 3.173 0.148302
+ 3.173 0.14956

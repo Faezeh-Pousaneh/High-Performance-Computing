@@ -1,0 +1,42 @@
+# This file was created Wed Jul 17 16:24:56 2019
+# Created by:
+#                  :-) GROMACS - gmx dipoles, VERSION 5.1.4 (-:
+# 
+# Executable:   /usr/local/gromacs/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Command line:
+#   gmx dipoles -f NVT_e.xtc -s NVT_e.tpr -b 800
+# gmx dipoles is part of G R O M A C S:
+#
+# Green Red Orange Magenta Azure Cyan Skyblue
+#
+@    title "Total dipole moment of the simulation box vs. time"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Total Dipole Moment (Debye)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "M\sx \N"
+@ s1 legend "M\sy \N"
+@ s2 legend "M\sz \N"
+@ s3 legend "|M\stot \N|"
+       800  1.38544192e+03 -7.55498801e+02 -1.16498509e+03 1.96148363e+03
+      1000  1.61462188e+03 -1.44888460e+02 -1.20819781e+03 2.02181563e+03
+      1200  9.34351164e+02 3.85822804e+02 -1.71493633e+03 1.99069785e+03
+      1400  1.02752039e+03 -7.34278999e+02 -1.52386551e+03 1.97917404e+03
+      1600  7.99763360e+02 7.26329351e+02 -1.61725119e+03 1.94491058e+03
+      1800  7.86618431e+01 9.97825098e+02 -1.62702593e+03 1.91025024e+03
+      2000  3.06171327e+02 9.33238697e+01 -1.92162837e+03 1.94810313e+03
+      2200  2.18941267e+02 -7.28556413e+02 -1.84507002e+03 1.99574876e+03
+      2400  -7.49528764e+02 -1.04892585e+03 -1.47851839e+03 1.96164610e+03
+      2600  -1.05733948e+03 6.75135742e+02 -1.46660910e+03 1.92995267e+03
+      2800  -2.69422294e+01 -7.33102306e+01 -1.91838030e+03 1.91996960e+03
+      3000  -5.37361758e+02 5.97402095e+02 -1.80621861e+03 1.97688457e+03
+      3200  -2.77156487e+02 6.97128815e+02 -1.86118596e+03 2.00669317e+03
+      3400  1.31868931e+03 5.57746313e+02 -1.23374828e+03 1.89001515e+03
+      3600  1.70188275e+03 5.33835393e+02 -9.34072826e+02 2.01342424e+03
+      3800  1.79313405e+03 -2.10651252e+02 -7.93453017e+02 1.97212356e+03

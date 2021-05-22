@@ -1,0 +1,45 @@
+# This file was created Sun Sep 15 18:23:44 2019
+# Created by:
+#                     :-) GROMACS - gmx analyze, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/DHS/0.644/V24
+# Command line:
+#   gmx analyze -f pressure.xvg -ee errest_pressure.xvg
+# gmx analyze is part of G R O M A C S:
+#
+# Green Red Orange Magenta Azure Cyan Skyblue
+#
+@    title "Error estimates"
+@    xaxis  label "Block size (time)"
+@    yaxis  label "Error estimate"
+@TYPE xy
+@ subtitle "using block averaging, total time 300000 (151 points)"
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "av 571.109901"
+@ s1 legend "ee 24.6307"
+2000 22.1047 17.4376
+4000 23.5906 20.6114
+6000 22.4172 21.9393
+8000 23.55 22.6284
+10000 22.1416 23.0406
+12000 19.7898 23.3128
+14000 27.8156 23.5055
+16000 17.4831 23.6491
+20000 24.5307 23.8486
+22000 21.544 23.9208
+24000 16.1078 23.9807
+26000 21.1427 24.0313
+30000 21.9789 24.1121
+32000 8.41316 24.1448
+36000 15.3719 24.1993
+42000 22.3603 24.2614
+50000 9.50571 24.3209
+60000 11.9723 24.3728
+74000 9.17043 24.4218

@@ -1,0 +1,196 @@
+
+
+*******************************************************************************
+Tue May 12 09:03:35 2020
+
+
+FIT:    data read from "LL_4000.xvg" u 1:2
+	x range restricted to [0.00100000 : 5.00000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: vai(x,a0,a1,a2)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 10.0336           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.518563
+
+initial set of free parameter values
+
+a0              = 1
+a1              = 1
+a2              = 1
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 6.17347e-07
+rel. change during last iteration : -9.31281e-14
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000217918
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.74882e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a0              = 0.0161472        +/- 0.0003356    (2.079%)
+a1              = 0.16097          +/- 0.07597      (47.19%)
+a2              = -0.000176532     +/- 0.001095     (620.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a0     a1     a2     
+a0              1.000 
+a1              0.959  1.000 
+a2              0.903  0.984  1.000 
+
+
+*******************************************************************************
+Tue May 12 09:03:35 2020
+
+
+FIT:    data read from "LL_8000.xvg" u 1:2
+	x range restricted to [0.00100000 : 5.00000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: vai(x,a0,a1,a2)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 10.0335           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.518563
+
+initial set of free parameter values
+
+a0              = 1
+a1              = 1
+a2              = 1
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 5.74759e-07
+rel. change during last iteration : -1.04266e-13
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000210267
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.42123e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a0              = 0.0161285        +/- 0.0003238    (2.008%)
+a1              = 0.152487         +/- 0.07355      (48.23%)
+a2              = -0.000324662     +/- 0.001057     (325.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a0     a1     a2     
+a0              1.000 
+a1              0.959  1.000 
+a2              0.903  0.984  1.000 
+
+
+*******************************************************************************
+Tue May 12 09:03:35 2020
+
+
+FIT:    data read from "LL_12000.xvg" u 1:2
+	x range restricted to [0.00100000 : 5.00000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: vai(x,a0,a1,a2)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 10.0331           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.518563
+
+initial set of free parameter values
+
+a0              = 1
+a1              = 1
+a2              = 1
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 5.83448e-07
+rel. change during last iteration : -1.0362e-13
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00021185
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.48806e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a0              = 0.016169         +/- 0.0003263    (2.018%)
+a1              = 0.149704         +/- 0.07397      (49.41%)
+a2              = -0.000455551     +/- 0.001065     (233.8%)
+
+
+correlation matrix of the fit parameters:
+
+               a0     a1     a2     
+a0              1.000 
+a1              0.959  1.000 
+a2              0.903  0.984  1.000 
+
+
+*******************************************************************************
+Tue May 12 09:03:35 2020
+
+
+FIT:    data read from "LL_16000.xvg" u 1:2
+	x range restricted to [0.00100000 : 5.00000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: vai(x,a0,a1,a2)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 10.0334           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.518563
+
+initial set of free parameter values
+
+a0              = 1
+a1              = 1
+a2              = 1
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 7.23206e-07
+rel. change during last iteration : -9.98465e-14
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000235863
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.56312e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a0              = 0.0160728        +/- 0.0003633    (2.26%)
+a1              = 0.133628         +/- 0.0832       (62.26%)
+a2              = -0.000632889     +/- 0.001186     (187.3%)
+
+
+correlation matrix of the fit parameters:
+
+               a0     a1     a2     
+a0              1.000 
+a1              0.959  1.000 
+a2              0.903  0.984  1.000 

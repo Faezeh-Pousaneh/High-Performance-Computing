@@ -1,0 +1,42 @@
+# This file was created Wed Jul 17 16:24:56 2019
+# Created by:
+#                  :-) GROMACS - gmx dipoles, VERSION 5.1.4 (-:
+# 
+# Executable:   /usr/local/gromacs/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Command line:
+#   gmx dipoles -f NVT_e.xtc -s NVT_e.tpr -b 800
+# gmx dipoles is part of G R O M A C S:
+#
+# Great Red Oystrich Makes All Chemists Sane
+#
+@    title "Total dipole moment"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "D"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "< |M|\S2\N >"
+@ s1 legend "< |M| >\S2\N"
+@ s2 legend "< |M|\S2\N > - < |M| >\S2\N"
+@ s3 legend "< |M| >\S2\N / < |M|\S2\N >"
+       800   3.847e+06  3.847e+06  0.000e+00  1.000e+00
+      1000   3.968e+06  3.861e+06  1.068e+05  9.731e-01
+      1200   3.966e+06  3.606e+06  3.597e+05  9.093e-01
+      1400   3.954e+06  3.605e+06  3.491e+05  9.117e-01
+      1600   3.920e+06  3.429e+06  4.903e+05  8.749e-01
+      1800   3.874e+06  3.132e+06  7.420e+05  8.085e-01
+      2000   3.863e+06  3.148e+06  7.149e+05  8.150e-01
+      2200   3.878e+06  3.123e+06  7.549e+05  8.053e-01
+      2400   3.875e+06  2.862e+06  1.012e+06  7.387e-01
+      2600   3.860e+06  2.634e+06  1.225e+06  6.825e-01
+      2800   3.844e+06  2.700e+06  1.144e+06  7.024e-01
+      3000   3.849e+06  2.696e+06  1.154e+06  7.003e-01
+      3200   3.863e+06  2.732e+06  1.131e+06  7.073e-01
+      3400   3.842e+06  2.694e+06  1.148e+06  7.013e-01
+      3600   3.856e+06  2.633e+06  1.223e+06  6.828e-01
+      3800   3.858e+06  2.566e+06  1.293e+06  6.649e-01

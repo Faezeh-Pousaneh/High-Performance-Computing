@@ -1,0 +1,74 @@
+# This file was created Sun Sep 15 18:23:44 2019
+# Created by:
+#                     :-) GROMACS - gmx density, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/DHS/0.644/V24
+# Command line:
+#   gmx density -f NVT.xtc -s NVT.tpr -dens num -b 400000
+# gmx density is part of G R O M A C S:
+#
+# GROwing Monsters And Cloning Shrimps
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Number density (nm\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+      0.0396          80.1642
+      0.1188          79.0067
+       0.198          84.3913
+      0.2772          78.5538
+      0.3564          78.4029
+      0.4356          81.7242
+      0.5148          75.1319
+       0.594          83.1835
+      0.6732          82.0261
+      0.7524          76.8932
+      0.8316          83.6867
+      0.9108          81.2209
+        0.99          78.3525
+      1.0692          77.2454
+      1.1484          85.2467
+      1.2276          82.8313
+      1.3068          81.5229
+       1.386          82.5293
+      1.4652          82.2777
+      1.5444          75.5848
+      1.6236          79.0067
+      1.7028          81.1203
+       1.782          77.2958
+      1.8612          85.4984
+      1.9404          82.0764
+      2.0196          74.7293
+      2.0988          74.1757
+       2.178           89.021
+      2.2572            81.07
+      2.3364          82.5796
+      2.4156          77.8996
+      2.4948          78.0506
+       2.574          86.9074
+      2.6532          79.1074
+      2.7324          74.8299
+      2.8116          82.1771
+      2.8908          89.0713
+        2.97          75.7357
+      3.0492          79.9125
+      3.1284          82.5293
+      3.2076           87.461
+      3.2868          85.0958
+       3.366          75.3332
+      3.4452          82.4287
+      3.5244          78.7551
+      3.6036          82.4287
+      3.6828          73.0686
+       3.762          79.2583
+      3.8412           82.328
+      3.9204          76.8932

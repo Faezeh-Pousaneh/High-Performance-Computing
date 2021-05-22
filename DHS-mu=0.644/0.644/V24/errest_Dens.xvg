@@ -1,0 +1,36 @@
+# This file was created Sun Sep 15 18:23:44 2019
+# Created by:
+#                     :-) GROMACS - gmx analyze, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/DHS/0.644/V24
+# Command line:
+#   gmx analyze -f density.xvg -ee errest_Dens.xvg
+# gmx analyze is part of G R O M A C S:
+#
+# GRoups of Organic Molecules in ACtion for Science
+#
+@    title "Error estimates"
+@    xaxis  label "Block size (time)"
+@    yaxis  label "Error estimate"
+@TYPE xy
+@ subtitle "using block averaging, total time 3.8808 (50 points)"
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "av 80.516412"
+@ s1 legend "ee 0.454756"
+0.0792 0.544722 0.371057
+0.1584 0.443546 0.412513
+0.2376 0.527765 0.426961
+0.3168 0.306955 0.434072
+0.396 0.323513 0.438287
+0.4752 0.480137 0.441074
+0.5544 0.501091 0.443055
+0.6336 0.20782 0.444534
+0.792 0.184872 0.446597
+0.9504 0.161791 0.447967

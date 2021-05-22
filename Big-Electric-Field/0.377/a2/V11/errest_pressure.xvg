@@ -1,0 +1,36 @@
+# This file was created Tue May 12 09:03:39 2020
+# Created by:
+#                     :-) GROMACS - gmx analyze, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/Field-Big/0.377/a2/V11
+# Command line:
+#   gmx analyze -f pressure.xvg -ee errest_pressure.xvg
+# gmx analyze is part of G R O M A C S:
+#
+# Great Red Oystrich Makes All Chemists Sane
+#
+@    title "Error estimates"
+@    xaxis  label "Block size (time)"
+@    yaxis  label "Error estimate"
+@TYPE xy
+@ subtitle "using block averaging, total time 101020 (52 points)"
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "av 57.351728"
+@ s1 legend "ee 0.709508"
+1980.78 0.544206 0.452495
+3961.57 0.532932 0.554061
+5942.35 0.646265 0.602126
+7923.14 0.564589 0.628828
+9903.92 0.578736 0.645313
+11884.7 0.686866 0.65633
+13865.5 0.71192 0.664156
+15846.3 0.692443 0.669984
+19807.8 0.800344 0.67807
+25750.2 0.494054 0.685453

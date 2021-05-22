@@ -1,0 +1,41 @@
+# This file was created Wed Jul 17 16:24:56 2019
+# Created by:
+#                  :-) GROMACS - gmx dipoles, VERSION 5.1.4 (-:
+# 
+# Executable:   /usr/local/gromacs/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Command line:
+#   gmx dipoles -f NVT_e.xtc -s NVT_e.tpr -b 800
+# gmx dipoles is part of G R O M A C S:
+#
+# Gyas ROwers Mature At Cryogenic Speed
+#
+@    title "Epsilon and Kirkwood factors"
+@    xaxis  label "Time (ps)"
+@    yaxis  label ""
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "epsilon"
+@ s1 legend "G\sk"
+@ s2 legend "g\sk"
+       800   1.000e+00  0.000e+00  0.000e+00
+      1000   2.529e+02  1.830e+01  1.222e+01
+      1200   8.494e+02  6.161e+01  4.110e+01
+      1400   8.245e+02  5.981e+01  3.990e+01
+      1600   1.157e+03  8.399e+01  5.601e+01
+      1800   1.751e+03  1.271e+02  8.477e+01
+      2000   1.687e+03  1.225e+02  8.167e+01
+      2200   1.782e+03  1.293e+02  8.624e+01
+      2400   2.389e+03  1.734e+02  1.156e+02
+      2600   2.892e+03  2.100e+02  1.400e+02
+      2800   2.700e+03  1.960e+02  1.307e+02
+      3000   2.722e+03  1.977e+02  1.318e+02
+      3200   2.668e+03  1.937e+02  1.292e+02
+      3400   2.708e+03  1.967e+02  1.311e+02
+      3600   2.886e+03  2.096e+02  1.397e+02
+      3800   3.051e+03  2.215e+02  1.477e+02

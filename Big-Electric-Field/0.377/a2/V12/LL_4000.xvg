@@ -1,0 +1,36 @@
+# This file was created Sat Apr 25 18:49:11 2020
+# Created by:
+#                       :-) GROMACS - gmx tcaf, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/Field-Big/0.377/a2/V12
+# Command line:
+#   gmx tcaf -f NVT_vis.trr -s NVT_vis.tpr -normalize -b 10000 -ov LL_4000.xvg
+# gmx tcaf is part of G R O M A C S:
+#
+# GRoups of Organic Molecules in ACtion for Science
+#
+@    title "Fits"
+@    xaxis  label "k (nm\S-1\N)"
+@    yaxis  label "\xh\f{} (10\S-3\N kg m\S-1\N s\S-1\N)"
+@TYPE xy
+@    s0 symbol 2
+@    s0 symbol color 1
+@    s0 linestyle 0
+ 0.460 0.0147884
+ 0.460 0.0150217
+ 0.460 0.0148055
+ 0.651 0.0144238
+ 0.651 0.0142091
+ 0.651 0.0147671
+ 0.651 0.0143555
+ 0.651 0.0142401
+ 0.651 0.0142384
+ 0.797 0.0137732
+ 0.797 0.0135932
+ 0.797 0.0135741
+ 0.797 0.0136087
+ 0.920 0.0132048
+ 0.920 0.0128046
+ 0.920 0.0129736

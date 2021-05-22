@@ -1,0 +1,74 @@
+# This file was created Tue May 12 09:03:40 2020
+# Created by:
+#                     :-) GROMACS - gmx density, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/Field-Big/0.377/a2/V12
+# Command line:
+#   gmx density -f NVT_F.xtc -s NVT_F.tpr -dens num -b 100000
+# gmx density is part of G R O M A C S:
+#
+# Gnomes, ROck Monsters And Chili Sauce
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Number density (nm\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+    0.136568          11.1794
+    0.409704          11.5098
+     0.68284           11.428
+    0.955976          11.6439
+     1.22911          11.2808
+     1.50225          11.8991
+     1.77538          11.7388
+     2.04852          11.9678
+     2.32166          12.0791
+     2.59479          12.0529
+     2.86793          11.8828
+     3.14106          12.2001
+      3.4142          12.0693
+     3.68734          11.7192
+     3.96047          12.7367
+     4.23361          11.7584
+     4.50674          12.3343
+     4.77988          12.0006
+     5.05302          11.3462
+     5.32615          11.8926
+     5.59929          11.3986
+     5.87242          12.6483
+     6.14556          11.8272
+      6.4187           11.693
+     6.69183          11.9122
+     6.96497          11.6538
+      7.2381          12.0823
+     7.51124          11.8173
+     7.78438          11.6276
+     8.05751          11.2775
+     8.33065          11.7126
+     8.60378          11.5065
+     8.87692          12.4848
+     9.15006          11.8141
+     9.42319          11.3691
+     9.69633          11.6538
+     9.96946          12.0333
+     10.2426          11.8533
+     10.5157          11.9776
+     10.7889          10.7475
+      11.062          12.0693
+     11.3351          11.0027
+     11.6083           12.439
+     11.8814          11.4247
+     12.1546          11.4444
+     12.4277          11.4018
+     12.7008          12.0267
+      12.974          11.4051
+     13.2471          12.2754
+     13.5202          11.6047

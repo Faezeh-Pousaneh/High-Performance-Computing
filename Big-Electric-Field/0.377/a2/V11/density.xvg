@@ -1,0 +1,74 @@
+# This file was created Tue May 12 09:03:39 2020
+# Created by:
+#                     :-) GROMACS - gmx density, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/Field-Big/0.377/a2/V11
+# Command line:
+#   gmx density -f NVT_F.xtc -s NVT_F.tpr -dens num -b 100000
+# gmx density is part of G R O M A C S:
+#
+# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Number density (nm\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+    0.131804          13.8953
+    0.395412          13.5423
+     0.65902          13.5023
+    0.922628          13.0947
+     1.18624          12.9855
+     1.44984          13.0182
+     1.71345          13.3822
+     1.97706          12.8581
+     2.24067          13.6115
+     2.50428          12.3631
+     2.76788          13.1929
+     3.03149          13.1311
+      3.2951          13.4622
+     3.55871          12.8253
+     3.82232          13.2657
+     4.08592          13.2402
+     4.34953          12.7635
+     4.61314          13.0546
+     4.87675          13.2075
+     5.14036          13.5096
+     5.40396          13.1347
+     5.66757          13.5168
+     5.93118          13.1056
+     6.19479           12.294
+      6.4584          12.6579
+       6.722          13.1966
+     6.98561          13.1165
+     7.24922          12.9054
+     7.51283          13.1056
+     7.77644          14.3575
+     8.04004          12.0028
+     8.30365          12.2976
+     8.56726          12.3631
+     8.83087          13.4877
+     9.09448          12.5997
+     9.35808          12.7926
+     9.62169          13.0583
+      9.8853           12.607
+     10.1489          13.4331
+     10.4125          13.7024
+     10.6761          13.2293
+     10.9397          13.5714
+     11.2033          12.8144
+     11.4669          12.6397
+     11.7306          12.8326
+     11.9942          13.6078
+     12.2578          12.5924
+     12.5214          13.2584
+      12.785          13.4877
+     13.0486          13.4222

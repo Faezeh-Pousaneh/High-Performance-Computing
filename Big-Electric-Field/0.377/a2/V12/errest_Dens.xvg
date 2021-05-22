@@ -1,0 +1,36 @@
+# This file was created Tue May 12 09:03:40 2020
+# Created by:
+#                     :-) GROMACS - gmx analyze, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/Field-Big/0.377/a2/V12
+# Command line:
+#   gmx analyze -f density.xvg -ee errest_Dens.xvg
+# gmx analyze is part of G R O M A C S:
+#
+# Gravel Rubs Often Many Awfully Cauterized Sores
+#
+@    title "Error estimates"
+@    xaxis  label "Block size (time)"
+@    yaxis  label "Error estimate"
+@TYPE xy
+@ subtitle "using block averaging, total time 13.3836 (50 points)"
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "av 11.778080"
+@ s1 legend "ee 0.0698776"
+0.273135 0.0572022 0.0465283
+0.546271 0.0535766 0.0562001
+0.819406 0.0661357 0.060562
+1.09254 0.0575997 0.0629152
+1.36568 0.0614489 0.0643459
+1.63881 0.0694649 0.0652955
+1.91195 0.0681471 0.0659685
+2.18508 0.0721927 0.0664695
+2.73135 0.0572567 0.0671649
+3.27762 0.0638659 0.0676245

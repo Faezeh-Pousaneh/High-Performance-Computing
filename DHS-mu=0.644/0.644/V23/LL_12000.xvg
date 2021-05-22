@@ -1,0 +1,36 @@
+# This file was created Sun Sep 15 06:15:13 2019
+# Created by:
+#                       :-) GROMACS - gmx tcaf, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/DHS/0.644/V23
+# Command line:
+#   gmx tcaf -f NVT_vis.trr -s NVT_vis.tpr -normalize -b 30000 -ov LL_12000.xvg
+# gmx tcaf is part of G R O M A C S:
+#
+# GROup of MAchos and Cynical Suckers
+#
+@    title "Fits"
+@    xaxis  label "k (nm\S-1\N)"
+@    yaxis  label "\xh\f{} (10\S-3\N kg m\S-1\N s\S-1\N)"
+@TYPE xy
+@    s0 symbol 2
+@    s0 symbol color 1
+@    s0 linestyle 0
+ 1.671 0.275402
+ 1.671 0.28019
+ 1.671 0.283171
+ 2.363 0.259706
+ 2.363 0.257973
+ 2.363 0.2604
+ 2.363 0.258134
+ 2.363 0.260108
+ 2.363 0.262121
+ 2.894 0.243906
+ 2.894 0.244921
+ 2.894 0.243808
+ 2.894 0.244044
+ 3.342 0.22958
+ 3.342 0.23162
+ 3.342 0.232375

@@ -1,0 +1,36 @@
+# This file was created Tue May 12 09:03:40 2020
+# Created by:
+#                     :-) GROMACS - gmx analyze, 2016.1 (-:
+# 
+# Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/gmx
+# Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+# Working dir:  /work/pousaneh/Field-Big/0.377/a2/V12
+# Command line:
+#   gmx analyze -f pressure.xvg -ee errest_pressure.xvg
+# gmx analyze is part of G R O M A C S:
+#
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+#
+@    title "Error estimates"
+@    xaxis  label "Block size (time)"
+@    yaxis  label "Error estimate"
+@TYPE xy
+@ subtitle "using block averaging, total time 101030 (52 points)"
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "av 52.617860"
+@ s1 legend "ee 0.440431"
+1980.98 0.511736 0.354841
+3961.96 0.383421 0.396909
+5942.94 0.360581 0.41179
+7923.92 0.452755 0.419127
+9904.9 0.448735 0.423473
+11885.9 0.412835 0.426346
+13866.9 0.292716 0.428387
+15847.8 0.294777 0.429911
+19809.8 0.48777 0.432035
+25752.7 0.302188 0.433987

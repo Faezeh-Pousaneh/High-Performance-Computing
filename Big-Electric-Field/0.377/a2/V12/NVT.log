@@ -1,0 +1,1889 @@
+Log file opened on Fri Dec 13 20:18:21 2019
+Host: r2i3n10  pid: 28087  rank ID: 0  number of ranks:  64
+                        :-) GROMACS - mdrun, 2016.1 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra    Gerrit Groenhof  
+ Christoph Junghans   Anca Hamuraru    Vincent Hindriksen Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff    Erik Marklund   
+   Teemu Murtola       Szilard Pall       Sander Pronk      Roland Schulz   
+  Alexey Shvetsov     Michael Shirts     Alfons Sijbers     Peter Tieleman  
+  Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      mdrun, version 2016.1
+Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/mdrun
+Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+Working dir:  /work/pousaneh/0.377-BIG/V17
+Command line:
+  mdrun -s NVT.tpr -deffnm NVT -table Table_HS_modif.xvg
+
+GROMACS version:    2016.1
+Precision:          single
+Memory model:       64 bit
+MPI library:        MPI
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 32)
+GPU support:        disabled
+SIMD instructions:  AVX_256
+FFT library:        Intel MKL
+RDTSCP usage:       disabled
+TNG support:        enabled
+Hwloc support:      disabled
+Tracing support:    disabled
+Built on:           Thu Jan 12 07:55:47 CET 2017
+Built by:           vegarde@service0 [CMAKE]
+Build OS/arch:      Linux 3.0.101-84-default x86_64
+Build CPU vendor:   Unknown
+Build CPU brand:    Unknown
+Build CPU family:   0   Model: 0   Stepping: 0
+Build CPU features: Unknown
+C compiler:         /sw/sdev/Modules/intelcomp/17.0/bin/icc Intel 17.0.0.20160721
+C compiler flags:    -mavx   -mkl=sequential  -std=gnu99  -O3 -xHost -DNDEBUG -ip -funroll-all-loops -alias-const -ansi-alias  
+C++ compiler:       /sw/sdev/Modules/intelcomp/17.0/bin/icpc Intel 17.0.0.20160721
+C++ compiler flags:  -mavx    -std=c++0x   -O3 -xHost -DNDEBUG -ip -funroll-all-loops -alias-const -ansi-alias  
+
+
+Running on 4 nodes with total 64 cores, 128 logical cores
+  Cores per node:           16
+  Logical cores per node:   32
+Hardware detected on host r2i3n10 (the node of MPI rank 0):
+  CPU info:
+    Vendor: Intel
+    Brand:  Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz
+    Family: 6   Model: 45   Stepping: 6
+    Features: aes apic avx clfsh cmov cx8 cx16 htt lahf mmx msr nonstop_tsc pcid pclmuldq pdcm pdpe1gb popcnt pse rdtscp sse2 sse3 sse4.1 sse4.2 ssse3 tdt x2apic
+    SIMD instructions most likely to fit this hardware: AVX_256
+    SIMD instructions selected at GROMACS compile time: AVX_256
+
+  Hardware topology: Basic
+    Sockets, cores, and logical processors:
+      Socket  0: [   0  16] [   1  17] [   2  18] [   3  19] [   4  20] [   5  21] [   6  22] [   7  23]
+      Socket  1: [   8  24] [   9  25] [  10  26] [  11  27] [  12  28] [  13  29] [  14  30] [  15  31]
+
+
+The current CPU can measure timings more accurately than the code in
+mdrun was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding mdrun with the GMX_USE_RDTSCP=ON CMake option.
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+M. J. Abraham, T. Murtola, R. Schulz, S. Páll, J. C. Smith, B. Hess, E.
+Lindahl
+GROMACS: High performance molecular simulations through multi-level
+parallelism from laptops to supercomputers
+SoftwareX 1 (2015) pp. 19-25
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Páll, M. J. Abraham, C. Kutzner, B. Hess, E. Lindahl
+Tackling Exascale Software Challenges in Molecular Dynamics Simulations with
+GROMACS
+In S. Markidis & E. Laure (Eds.), Solving Software Challenges for Exascale 8759 (2015) pp. 3-27
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Pronk, S. Páll, R. Schulz, P. Larsson, P. Bjelkmar, R. Apostolov, M. R.
+Shirts, J. C. Smith, P. M. Kasson, D. van der Spoel, B. Hess, and E. Lindahl
+GROMACS 4.5: a high-throughput and highly parallel open source molecular
+simulation toolkit
+Bioinformatics 29 (2013) pp. 845-54
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and C. Kutzner and D. van der Spoel and E. Lindahl
+GROMACS 4: Algorithms for highly efficient, load-balanced, and scalable
+molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 435-447
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+D. van der Spoel, E. Lindahl, B. Hess, G. Groenhof, A. E. Mark and H. J. C.
+Berendsen
+GROMACS: Fast, Flexible and Free
+J. Comp. Chem. 26 (2005) pp. 1701-1719
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+E. Lindahl and B. Hess and D. van der Spoel
+GROMACS 3.0: A package for molecular simulation and trajectory analysis
+J. Mol. Mod. 7 (2001) pp. 306-317
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+H. J. C. Berendsen, D. van der Spoel and R. van Drunen
+GROMACS: A message-passing parallel molecular dynamics implementation
+Comp. Phys. Comm. 91 (1995) pp. 43-56
+-------- -------- --- Thank You --- -------- --------
+
+Input Parameters:
+   integrator                     = md
+   tinit                          = 0
+   dt                             = 0.002
+   nsteps                         = 100000000
+   init-step                      = 0
+   simulation-part                = 1
+   comm-mode                      = Linear
+   nstcomm                        = 100
+   bd-fric                        = 0
+   ld-seed                        = 691345098
+   emtol                          = 10
+   emstep                         = 0.01
+   niter                          = 20
+   fcstep                         = 0
+   nstcgsteep                     = 1000
+   nbfgscorr                      = 10
+   rtpi                           = 0.05
+   nstxout                        = 10000000
+   nstvout                        = 10000000
+   nstfout                        = 0
+   nstlog                         = 10000000
+   nstcalcenergy                  = 100
+   nstenergy                      = 1000000
+   nstxout-compressed             = 10000000
+   compressed-x-precision         = 1000
+   cutoff-scheme                  = Group
+   nstlist                        = 10
+   ns-type                        = Grid
+   pbc                            = xyz
+   periodic-molecules             = false
+   verlet-buffer-tolerance        = 0.005
+   rlist                          = 0.9
+   coulombtype                    = PME
+   coulomb-modifier               = None
+   rcoulomb-switch                = 0
+   rcoulomb                       = 0.9
+   epsilon-r                      = 1
+   epsilon-rf                     = inf
+   vdw-type                       = User
+   vdw-modifier                   = None
+   rvdw-switch                    = 0
+   rvdw                           = 0.3479
+   DispCorr                       = No
+   table-extension                = 1
+   fourierspacing                 = 0.16
+   fourier-nx                     = 96
+   fourier-ny                     = 96
+   fourier-nz                     = 96
+   pme-order                      = 4
+   ewald-rtol                     = 1e-05
+   ewald-rtol-lj                  = 0.001
+   lj-pme-comb-rule               = Geometric
+   ewald-geometry                 = 0
+   epsilon-surface                = 0
+   implicit-solvent               = No
+   gb-algorithm                   = Still
+   nstgbradii                     = 1
+   rgbradii                       = 1
+   gb-epsilon-solvent             = 80
+   gb-saltconc                    = 0
+   gb-obc-alpha                   = 1
+   gb-obc-beta                    = 0.8
+   gb-obc-gamma                   = 4.85
+   gb-dielectric-offset           = 0.009
+   sa-algorithm                   = Ace-approximation
+   sa-surface-tension             = 2.05016
+   tcoupl                         = V-rescale
+   nsttcouple                     = 10
+   nh-chain-length                = 0
+   print-nose-hoover-chain-variables = false
+   pcoupl                         = No
+   pcoupltype                     = Isotropic
+   nstpcouple                     = -1
+   tau-p                          = 1
+   compressibility (3x3):
+      compressibility[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      compressibility[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      compressibility[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   ref-p (3x3):
+      ref-p[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref-p[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref-p[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   refcoord-scaling               = No
+   posres-com (3):
+      posres-com[0]= 0.00000e+00
+      posres-com[1]= 0.00000e+00
+      posres-com[2]= 0.00000e+00
+   posres-comB (3):
+      posres-comB[0]= 0.00000e+00
+      posres-comB[1]= 0.00000e+00
+      posres-comB[2]= 0.00000e+00
+   QMMM                           = false
+   QMconstraints                  = 0
+   QMMMscheme                     = 0
+   MMChargeScaleFactor            = 1
+qm-opts:
+   ngQM                           = 0
+   constraint-algorithm           = Lincs
+   continuation                   = true
+   Shake-SOR                      = false
+   shake-tol                      = 0.0001
+   lincs-order                    = 4
+   lincs-iter                     = 1
+   lincs-warnangle                = 30
+   nwall                          = 0
+   wall-type                      = 9-3
+   wall-r-linpot                  = -1
+   wall-atomtype[0]               = -1
+   wall-atomtype[1]               = -1
+   wall-density[0]                = 0
+   wall-density[1]                = 0
+   wall-ewald-zfac                = 3
+   pull                           = false
+   rotation                       = false
+   interactiveMD                  = false
+   disre                          = No
+   disre-weighting                = Conservative
+   disre-mixed                    = false
+   dr-fc                          = 1000
+   dr-tau                         = 0
+   nstdisreout                    = 100
+   orire-fc                       = 0
+   orire-tau                      = 0
+   nstorireout                    = 100
+   free-energy                    = no
+   cos-acceleration               = 0
+   deform (3x3):
+      deform[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   simulated-tempering            = false
+   E-x:
+      n = 0
+   E-xt:
+      n = 0
+   E-y:
+      n = 0
+   E-yt:
+      n = 0
+   E-z:
+      n = 0
+   E-zt:
+      n = 0
+   swapcoords                     = no
+   userint1                       = 0
+   userint2                       = 0
+   userint3                       = 0
+   userint4                       = 0
+   userreal1                      = 0
+   userreal2                      = 0
+   userreal3                      = 0
+   userreal4                      = 0
+grpopts:
+   nrdf:       29997
+   ref-t:       179.8
+   tau-t:         0.1
+annealing:          No
+annealing-npoints:           0
+   acc:	           0           0           0
+   nfreeze:           N           N           N
+   energygrp-flags[  0]: 0
+
+
+Initializing Domain Decomposition on 64 ranks
+Dynamic load balancing: auto
+Guess for relative PME load: 0.93
+Using 0 separate PME ranks, as guessed by mdrun
+Scaling the initial minimum size with 1/0.8 (option -dds) = 1.25
+Optimizing the DD grid for 64 cells with a minimum initial size of 0.000 nm
+Domain decomposition grid 8 x 8 x 1, separate PME ranks 0
+PME domain decomposition: 8 x 8 x 1
+Domain decomposition rank 0, coordinates 0 0 0
+
+The initial number of communication pulses is: X 1 Y 1
+The initial domain decomposition cell size is: X 1.71 nm Y 1.71 nm
+
+When dynamic load balancing gets turned on, these settings will change to:
+The maximum number of communication pulses is: X 1 Y 1
+The minimum size for domain decomposition cells is 0.900 nm
+The requested allowed shrink of DD cells (option -dds) is: 0.80
+The allowed shrink of domain decomposition cells is: X 0.53 Y 0.53
+Using two step summing over 4 groups of on average 16.0 ranks
+
+Using 64 MPI processes
+
+
+NOTE: This file uses the deprecated 'group' cutoff_scheme. This will be
+removed in a future release when 'verlet' supports all interaction forms.
+
+Table routines are used for coulomb: false
+Table routines are used for vdw:     true
+Will do PME sum in reciprocal space for electrostatic interactions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+U. Essmann, L. Perera, M. L. Berkowitz, T. Darden, H. Lee and L. G. Pedersen 
+A smooth particle mesh Ewald method
+J. Chem. Phys. 103 (1995) pp. 8577-8592
+-------- -------- --- Thank You --- -------- --------
+
+Will do ordinary reciprocal space Ewald sum.
+Using a Gaussian width (1/beta) of 0.288146 nm for Ewald
+Cut-off's:   NS: 0.9   Coulomb: 0.9   LJ: 0.3479
+System total charge: 0.000
+Read user tables from Table_HS_modif.xvg with 1501 data points.
+Tabscale = 500 points/nm
+Generated table with 950 data points for Ewald.
+Tabscale = 500 points/nm
+Potential shift: LJ r^-12: 0.000e+00 r^-6: 0.000e+00, Ewald -0.000e+00
+Initialized non-bonded Ewald correction tables, spacing: 8.85e-04 size: 2148
+
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Initializing LINear Constraint Solver
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and H. Bekker and H. J. C. Berendsen and J. G. E. M. Fraaije
+LINCS: A Linear Constraint Solver for molecular simulations
+J. Comp. Chem. 18 (1997) pp. 1463-1472
+-------- -------- --- Thank You --- -------- --------
+
+The number of constraints is 6000
+
+Linking all bonded interactions to atoms
+
+Intra-simulation communication will occur every 10 steps.
+Center of mass motion removal mode is Linear
+We have the following groups for center of mass motion removal:
+  0:  rest
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+G. Bussi, D. Donadio and M. Parrinello
+Canonical sampling through velocity rescaling
+J. Chem. Phys. 126 (2007) pp. 014101
+-------- -------- --- Thank You --- -------- --------
+
+There are: 12000 Atoms
+There are: 18000 VSites
+Atom distribution over 64 domains: av 468 stddev 52 min 370 max 600
+Grid: 4 x 4 x 15 cells
+Initial temperature: 180.104 K
+
+Started mdrun on rank 0 Fri Dec 13 20:18:21 2019
+           Step           Time
+              0        0.00000
+
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.21298e+02   -1.02795e+06   -4.38789e+05   -1.46662e+06    2.24600e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44416e+06   -1.44416e+06    1.80106e+02    5.97684e+01    5.52574e-06
+
+DD  step 9 load imb.: force 28.7%
+
+Writing checkpoint, step 856730 at Fri Dec 13 20:33:21 2019
+
+
+Writing checkpoint, step 1712070 at Fri Dec 13 20:48:21 2019
+
+
+Writing checkpoint, step 2568230 at Fri Dec 13 21:03:21 2019
+
+
+Writing checkpoint, step 3424680 at Fri Dec 13 21:18:21 2019
+
+
+Writing checkpoint, step 4280550 at Fri Dec 13 21:33:21 2019
+
+
+Writing checkpoint, step 5137810 at Fri Dec 13 21:48:21 2019
+
+
+Writing checkpoint, step 5995640 at Fri Dec 13 22:03:21 2019
+
+
+Writing checkpoint, step 6852830 at Fri Dec 13 22:18:21 2019
+
+
+Writing checkpoint, step 7709920 at Fri Dec 13 22:33:21 2019
+
+
+Writing checkpoint, step 8575170 at Fri Dec 13 22:48:21 2019
+
+
+Writing checkpoint, step 9432730 at Fri Dec 13 23:03:21 2019
+
+
+DD  step 9999999 load imb.: force 25.7%
+
+           Step           Time
+       10000000    20000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    7.94493e+01   -1.02773e+06   -4.38737e+05   -1.46639e+06    2.21081e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44428e+06   -1.44173e+06    1.77284e+02    4.91367e+01    5.46248e-06
+
+Writing checkpoint, step 10290410 at Fri Dec 13 23:18:21 2019
+
+
+Writing checkpoint, step 11148490 at Fri Dec 13 23:33:21 2019
+
+
+Writing checkpoint, step 12006490 at Fri Dec 13 23:48:21 2019
+
+
+Writing checkpoint, step 12864930 at Sat Dec 14 00:03:21 2019
+
+
+Writing checkpoint, step 13722110 at Sat Dec 14 00:18:21 2019
+
+
+Writing checkpoint, step 14579150 at Sat Dec 14 00:33:21 2019
+
+
+Writing checkpoint, step 15436060 at Sat Dec 14 00:48:21 2019
+
+
+Writing checkpoint, step 16293460 at Sat Dec 14 01:03:21 2019
+
+
+Writing checkpoint, step 17150420 at Sat Dec 14 01:18:21 2019
+
+
+Writing checkpoint, step 18007610 at Sat Dec 14 01:33:21 2019
+
+
+Writing checkpoint, step 18864490 at Sat Dec 14 01:48:21 2019
+
+
+Writing checkpoint, step 19721970 at Sat Dec 14 02:03:21 2019
+
+
+DD  step 19999999 load imb.: force 20.9%
+
+           Step           Time
+       20000000    40000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    9.98123e+01   -1.02774e+06   -4.38714e+05   -1.46635e+06    2.25552e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44380e+06   -1.43931e+06    1.80869e+02    5.65623e+01    5.44175e-06
+
+Writing checkpoint, step 20578520 at Sat Dec 14 02:18:21 2019
+
+
+Writing checkpoint, step 21436340 at Sat Dec 14 02:33:21 2019
+
+
+Writing checkpoint, step 22294280 at Sat Dec 14 02:48:21 2019
+
+
+Writing checkpoint, step 23152980 at Sat Dec 14 03:03:21 2019
+
+
+Writing checkpoint, step 24010780 at Sat Dec 14 03:18:21 2019
+
+
+Writing checkpoint, step 24868020 at Sat Dec 14 03:33:21 2019
+
+
+Writing checkpoint, step 25725850 at Sat Dec 14 03:48:21 2019
+
+
+Writing checkpoint, step 26583560 at Sat Dec 14 04:03:21 2019
+
+
+Writing checkpoint, step 27441220 at Sat Dec 14 04:18:21 2019
+
+
+Writing checkpoint, step 28298370 at Sat Dec 14 04:33:21 2019
+
+
+Writing checkpoint, step 29156370 at Sat Dec 14 04:48:21 2019
+
+
+DD  step 29999999 load imb.: force 24.9%
+
+           Step           Time
+       30000000    60000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.11878e+02   -1.02777e+06   -4.38713e+05   -1.46637e+06    2.25528e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44382e+06   -1.43685e+06    1.80850e+02    5.79779e+01    5.45845e-06
+
+Writing checkpoint, step 30014510 at Sat Dec 14 05:03:21 2019
+
+
+Writing checkpoint, step 30872990 at Sat Dec 14 05:18:21 2019
+
+
+Writing checkpoint, step 31731020 at Sat Dec 14 05:33:21 2019
+
+
+Writing checkpoint, step 32589400 at Sat Dec 14 05:48:21 2019
+
+
+Writing checkpoint, step 33447660 at Sat Dec 14 06:03:21 2019
+
+
+Writing checkpoint, step 34305660 at Sat Dec 14 06:18:21 2019
+
+
+Writing checkpoint, step 35164500 at Sat Dec 14 06:33:21 2019
+
+
+Writing checkpoint, step 36031500 at Sat Dec 14 06:48:21 2019
+
+
+Writing checkpoint, step 36890430 at Sat Dec 14 07:03:21 2019
+
+
+Writing checkpoint, step 37748750 at Sat Dec 14 07:18:21 2019
+
+
+Writing checkpoint, step 38607220 at Sat Dec 14 07:33:21 2019
+
+
+Writing checkpoint, step 39466420 at Sat Dec 14 07:48:21 2019
+
+
+DD  step 39999999 load imb.: force 28.7%
+
+           Step           Time
+       40000000    80000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.04916e+02   -1.02782e+06   -4.38739e+05   -1.46646e+06    2.23426e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44411e+06   -1.43439e+06    1.79165e+02    5.63523e+01    5.57495e-06
+
+Writing checkpoint, step 40325440 at Sat Dec 14 08:03:21 2019
+
+
+Writing checkpoint, step 41182900 at Sat Dec 14 08:18:21 2019
+
+
+Writing checkpoint, step 42041190 at Sat Dec 14 08:33:21 2019
+
+
+Writing checkpoint, step 42899700 at Sat Dec 14 08:48:21 2019
+
+
+Writing checkpoint, step 43758240 at Sat Dec 14 09:03:21 2019
+
+
+Writing checkpoint, step 44615250 at Sat Dec 14 09:18:21 2019
+
+
+Writing checkpoint, step 45472500 at Sat Dec 14 09:33:21 2019
+
+
+Writing checkpoint, step 46330110 at Sat Dec 14 09:48:21 2019
+
+
+Writing checkpoint, step 47188020 at Sat Dec 14 10:03:21 2019
+
+
+Writing checkpoint, step 48045440 at Sat Dec 14 10:18:21 2019
+
+
+Writing checkpoint, step 48903130 at Sat Dec 14 10:33:21 2019
+
+
+Writing checkpoint, step 49761870 at Sat Dec 14 10:48:21 2019
+
+
+DD  step 49999999 load imb.: force 27.1%
+
+           Step           Time
+       50000000   100000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.10349e+02   -1.02787e+06   -4.38761e+05   -1.46652e+06    2.25450e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44397e+06   -1.43198e+06    1.80787e+02    5.71399e+01    5.65194e-06
+
+Writing checkpoint, step 50620380 at Sat Dec 14 11:03:21 2019
+
+
+Writing checkpoint, step 51479090 at Sat Dec 14 11:18:21 2019
+
+
+Writing checkpoint, step 52337830 at Sat Dec 14 11:33:21 2019
+
+
+Writing checkpoint, step 53196600 at Sat Dec 14 11:48:21 2019
+
+
+Writing checkpoint, step 54055410 at Sat Dec 14 12:03:21 2019
+
+
+Writing checkpoint, step 54914400 at Sat Dec 14 12:18:21 2019
+
+
+Writing checkpoint, step 55773170 at Sat Dec 14 12:33:21 2019
+
+
+Writing checkpoint, step 56632400 at Sat Dec 14 12:48:21 2019
+
+
+Writing checkpoint, step 57491770 at Sat Dec 14 13:03:21 2019
+
+
+Writing checkpoint, step 58351040 at Sat Dec 14 13:18:21 2019
+
+
+Writing checkpoint, step 59210320 at Sat Dec 14 13:33:21 2019
+
+
+DD  step 59999999 load imb.: force 31.9%
+
+           Step           Time
+       60000000   120000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.16772e+02   -1.02786e+06   -4.38766e+05   -1.46651e+06    2.24864e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44403e+06   -1.42954e+06    1.80318e+02    5.89042e+01    5.49897e-06
+
+Writing checkpoint, step 60068500 at Sat Dec 14 13:48:21 2019
+
+
+Writing checkpoint, step 60927490 at Sat Dec 14 14:03:21 2019
+
+
+Writing checkpoint, step 61786300 at Sat Dec 14 14:18:21 2019
+
+
+Writing checkpoint, step 62645480 at Sat Dec 14 14:33:21 2019
+
+
+Writing checkpoint, step 63511150 at Sat Dec 14 14:48:21 2019
+
+
+Writing checkpoint, step 64369220 at Sat Dec 14 15:03:21 2019
+
+
+Writing checkpoint, step 65227650 at Sat Dec 14 15:18:21 2019
+
+
+Writing checkpoint, step 66086310 at Sat Dec 14 15:33:21 2019
+
+
+Writing checkpoint, step 66945530 at Sat Dec 14 15:48:21 2019
+
+
+Writing checkpoint, step 67804560 at Sat Dec 14 16:03:21 2019
+
+
+Writing checkpoint, step 68663330 at Sat Dec 14 16:18:21 2019
+
+
+Writing checkpoint, step 69521970 at Sat Dec 14 16:33:21 2019
+
+
+DD  step 69999999 load imb.: force 23.0%
+
+           Step           Time
+       70000000   140000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.18222e+02   -1.02796e+06   -4.38784e+05   -1.46663e+06    2.23146e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44432e+06   -1.42707e+06    1.78940e+02    5.82207e+01    5.50561e-06
+
+Writing checkpoint, step 70380720 at Sat Dec 14 16:48:21 2019
+
+
+Writing checkpoint, step 71239490 at Sat Dec 14 17:03:21 2019
+
+
+Writing checkpoint, step 72098410 at Sat Dec 14 17:18:21 2019
+
+
+Writing checkpoint, step 72957060 at Sat Dec 14 17:33:21 2019
+
+
+Writing checkpoint, step 73815370 at Sat Dec 14 17:48:21 2019
+
+
+Writing checkpoint, step 74673330 at Sat Dec 14 18:03:21 2019
+
+
+Writing checkpoint, step 75530790 at Sat Dec 14 18:18:21 2019
+
+
+Writing checkpoint, step 76388240 at Sat Dec 14 18:33:21 2019
+
+
+Writing checkpoint, step 77224810 at Sat Dec 14 18:48:21 2019
+
+
+Writing checkpoint, step 78081910 at Sat Dec 14 19:03:21 2019
+
+
+Writing checkpoint, step 78939880 at Sat Dec 14 19:18:21 2019
+
+
+Writing checkpoint, step 79776860 at Sat Dec 14 19:33:21 2019
+
+
+DD  step 79999999 load imb.: force 20.9%
+
+           Step           Time
+       80000000   160000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.13938e+02   -1.02794e+06   -4.38799e+05   -1.46663e+06    2.22488e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44438e+06   -1.42467e+06    1.78412e+02    5.58025e+01    5.52047e-06
+
+Writing checkpoint, step 80635410 at Sat Dec 14 19:48:21 2019
+
+
+Writing checkpoint, step 81488140 at Sat Dec 14 20:03:21 2019
+
+
+Writing checkpoint, step 82328200 at Sat Dec 14 20:18:21 2019
+
+
+Writing checkpoint, step 83187220 at Sat Dec 14 20:33:21 2019
+
+
+Writing checkpoint, step 84045440 at Sat Dec 14 20:48:21 2019
+
+
+Writing checkpoint, step 84904300 at Sat Dec 14 21:03:21 2019
+
+
+Writing checkpoint, step 85762740 at Sat Dec 14 21:18:21 2019
+
+
+Writing checkpoint, step 86621460 at Sat Dec 14 21:33:21 2019
+
+
+Writing checkpoint, step 87479960 at Sat Dec 14 21:48:21 2019
+
+
+Writing checkpoint, step 88338290 at Sat Dec 14 22:03:21 2019
+
+
+Writing checkpoint, step 89196420 at Sat Dec 14 22:18:21 2019
+
+
+DD  step 89999999 load imb.: force 23.7%
+
+           Step           Time
+       90000000   180000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.21405e+02   -1.02789e+06   -4.38724e+05   -1.46650e+06    2.24155e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44408e+06   -1.42225e+06    1.79749e+02    5.99959e+01    5.53173e-06
+
+Writing checkpoint, step 90054610 at Sat Dec 14 22:33:21 2019
+
+
+Writing checkpoint, step 90920030 at Sat Dec 14 22:48:21 2019
+
+
+Writing checkpoint, step 91777790 at Sat Dec 14 23:03:21 2019
+
+
+Writing checkpoint, step 92635820 at Sat Dec 14 23:18:21 2019
+
+
+Writing checkpoint, step 93493230 at Sat Dec 14 23:33:21 2019
+
+
+Writing checkpoint, step 94351700 at Sat Dec 14 23:48:21 2019
+
+
+Writing checkpoint, step 95210890 at Sun Dec 15 00:03:21 2019
+
+
+Writing checkpoint, step 96069780 at Sun Dec 15 00:18:21 2019
+
+
+Writing checkpoint, step 96928170 at Sun Dec 15 00:33:21 2019
+
+
+Writing checkpoint, step 97786200 at Sun Dec 15 00:48:21 2019
+
+
+Writing checkpoint, step 98644810 at Sun Dec 15 01:03:21 2019
+
+
+Writing checkpoint, step 99503930 at Sun Dec 15 01:18:21 2019
+
+
+DD  step 99999999 load imb.: force 27.9%
+
+           Step           Time
+      100000000   200000.00000
+
+Writing checkpoint, step 100000000 at Sun Dec 15 01:27:01 2019
+
+
+
+
+-----------------------------------------------------------
+Restarting from checkpoint, appending to previous log file.
+
+Log file opened on Tue Dec 17 10:04:27 2019
+Host: r4i2n16  pid: 1383  rank ID: 0  number of ranks:  128
+                        :-) GROMACS - mdrun, 2016.1 (-:
+
+Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/mdrun
+Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+Working dir:  /work/pousaneh/0.377-BIG/V12
+Command line:
+  mdrun -s NVT.tpr -deffnm NVT -append -cpi NVT.cpt -table Table_HS_modif.xvg
+
+GROMACS version:    2016.1
+Precision:          single
+Memory model:       64 bit
+MPI library:        MPI
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 32)
+GPU support:        disabled
+SIMD instructions:  AVX_256
+FFT library:        Intel MKL
+RDTSCP usage:       disabled
+TNG support:        enabled
+Hwloc support:      disabled
+Tracing support:    disabled
+Built on:           Thu Jan 12 07:55:47 CET 2017
+Built by:           vegarde@service0 [CMAKE]
+Build OS/arch:      Linux 3.0.101-84-default x86_64
+Build CPU vendor:   Unknown
+Build CPU brand:    Unknown
+Build CPU family:   0   Model: 0   Stepping: 0
+Build CPU features: Unknown
+C compiler:         /sw/sdev/Modules/intelcomp/17.0/bin/icc Intel 17.0.0.20160721
+C compiler flags:    -mavx   -mkl=sequential  -std=gnu99  -O3 -xHost -DNDEBUG -ip -funroll-all-loops -alias-const -ansi-alias  
+C++ compiler:       /sw/sdev/Modules/intelcomp/17.0/bin/icpc Intel 17.0.0.20160721
+C++ compiler flags:  -mavx    -std=c++0x   -O3 -xHost -DNDEBUG -ip -funroll-all-loops -alias-const -ansi-alias  
+
+
+Initializing Domain Decomposition on 128 ranks
+Dynamic load balancing: auto
+Guess for relative PME load: 0.93
+Using 0 separate PME ranks, as guessed by mdrun
+Scaling the initial minimum size with 1/0.8 (option -dds) = 1.25
+Optimizing the DD grid for 128 cells with a minimum initial size of 0.000 nm
+Domain decomposition grid 16 x 8 x 1, separate PME ranks 0
+PME domain decomposition: 16 x 8 x 1
+Domain decomposition rank 0, coordinates 0 0 0
+
+The initial number of communication pulses is: X 2 Y 1
+The initial domain decomposition cell size is: X 0.85 nm Y 1.71 nm
+
+When dynamic load balancing gets turned on, these settings will change to:
+The maximum number of communication pulses is: X 2 Y 2
+The minimum size for domain decomposition cells is 0.450 nm
+The requested allowed shrink of DD cells (option -dds) is: 0.80
+The allowed shrink of domain decomposition cells is: X 0.53 Y 0.26
+Using two step summing over 8 groups of on average 16.0 ranks
+
+Using 128 MPI processes
+
+
+NOTE: This file uses the deprecated 'group' cutoff_scheme. This will be
+removed in a future release when 'verlet' supports all interaction forms.
+
+Table routines are used for coulomb: false
+Table routines are used for vdw:     true
+Will do PME sum in reciprocal space for electrostatic interactions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+U. Essmann, L. Perera, M. L. Berkowitz, T. Darden, H. Lee and L. G. Pedersen 
+A smooth particle mesh Ewald method
+J. Chem. Phys. 103 (1995) pp. 8577-8592
+-------- -------- --- Thank You --- -------- --------
+
+Will do ordinary reciprocal space Ewald sum.
+Using a Gaussian width (1/beta) of 0.288146 nm for Ewald
+Cut-off's:   NS: 0.9   Coulomb: 0.9   LJ: 0.3479
+System total charge: 0.000
+Read user tables from Table_HS_modif.xvg with 1501 data points.
+Tabscale = 500 points/nm
+Generated table with 950 data points for Ewald.
+Tabscale = 500 points/nm
+Potential shift: LJ r^-12: 0.000e+00 r^-6: 0.000e+00, Ewald -0.000e+00
+Initialized non-bonded Ewald correction tables, spacing: 8.85e-04 size: 2148
+
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Initializing LINear Constraint Solver
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and H. Bekker and H. J. C. Berendsen and J. G. E. M. Fraaije
+LINCS: A Linear Constraint Solver for molecular simulations
+J. Comp. Chem. 18 (1997) pp. 1463-1472
+-------- -------- --- Thank You --- -------- --------
+
+The number of constraints is 6000
+
+Linking all bonded interactions to atoms
+
+Intra-simulation communication will occur every 10 steps.
+Center of mass motion removal mode is Linear
+We have the following groups for center of mass motion removal:
+  0:  rest
+There are: 12000 Atoms
+There are: 18000 VSites
+Atom distribution over 128 domains: av 234 stddev 36 min 145 max 325
+Grid: 5 x 4 x 15 cells
+Initial temperature: 180.965 K
+
+Started mdrun on rank 0 Tue Dec 17 10:04:27 2019
+           Step           Time
+      100000000   200000.00000
+
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.11583e+02   -1.02785e+06   -4.38719e+05   -1.46645e+06    2.25673e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44389e+06   -1.41980e+06    1.80966e+02    5.81315e+01    5.41419e-06
+
+DD  step 100000009 load imb.: force 30.6%
+
+DD  step 100499999 load imb.: force 27.2%
+
+           Step           Time
+      100500000   201000.00000
+
+Writing checkpoint, step 100500000 at Tue Dec 17 10:11:16 2019
+
+
+
+
+-----------------------------------------------------------
+Restarting from checkpoint, appending to previous log file.
+
+Log file opened on Sun Dec 29 18:53:54 2019
+Host: r1i4n9  pid: 18004  rank ID: 0  number of ranks:  64
+                        :-) GROMACS - mdrun, 2016.1 (-:
+
+Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/mdrun
+Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+Working dir:  /work/pousaneh/0.377-BIG/V12
+Command line:
+  mdrun -s NVT.tpr -deffnm NVT -append -cpi NVT.cpt -table Table_HS_modif.xvg
+
+GROMACS version:    2016.1
+Precision:          single
+Memory model:       64 bit
+MPI library:        MPI
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 32)
+GPU support:        disabled
+SIMD instructions:  AVX_256
+FFT library:        Intel MKL
+RDTSCP usage:       disabled
+TNG support:        enabled
+Hwloc support:      disabled
+Tracing support:    disabled
+Built on:           Thu Jan 12 07:55:47 CET 2017
+Built by:           vegarde@service0 [CMAKE]
+Build OS/arch:      Linux 3.0.101-84-default x86_64
+Build CPU vendor:   Unknown
+Build CPU brand:    Unknown
+Build CPU family:   0   Model: 0   Stepping: 0
+Build CPU features: Unknown
+C compiler:         /sw/sdev/Modules/intelcomp/17.0/bin/icc Intel 17.0.0.20160721
+C compiler flags:    -mavx   -mkl=sequential  -std=gnu99  -O3 -xHost -DNDEBUG -ip -funroll-all-loops -alias-const -ansi-alias  
+C++ compiler:       /sw/sdev/Modules/intelcomp/17.0/bin/icpc Intel 17.0.0.20160721
+C++ compiler flags:  -mavx    -std=c++0x   -O3 -xHost -DNDEBUG -ip -funroll-all-loops -alias-const -ansi-alias  
+
+
+Initializing Domain Decomposition on 64 ranks
+Dynamic load balancing: auto
+Guess for relative PME load: 0.93
+Using 0 separate PME ranks, as guessed by mdrun
+Scaling the initial minimum size with 1/0.8 (option -dds) = 1.25
+Optimizing the DD grid for 64 cells with a minimum initial size of 0.000 nm
+Domain decomposition grid 8 x 8 x 1, separate PME ranks 0
+PME domain decomposition: 8 x 8 x 1
+Domain decomposition rank 0, coordinates 0 0 0
+
+The initial number of communication pulses is: X 1 Y 1
+The initial domain decomposition cell size is: X 1.71 nm Y 1.71 nm
+
+When dynamic load balancing gets turned on, these settings will change to:
+The maximum number of communication pulses is: X 1 Y 1
+The minimum size for domain decomposition cells is 0.900 nm
+The requested allowed shrink of DD cells (option -dds) is: 0.80
+The allowed shrink of domain decomposition cells is: X 0.53 Y 0.53
+Using two step summing over 4 groups of on average 16.0 ranks
+
+Using 64 MPI processes
+
+
+NOTE: This file uses the deprecated 'group' cutoff_scheme. This will be
+removed in a future release when 'verlet' supports all interaction forms.
+
+Table routines are used for coulomb: false
+Table routines are used for vdw:     true
+Will do PME sum in reciprocal space for electrostatic interactions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+U. Essmann, L. Perera, M. L. Berkowitz, T. Darden, H. Lee and L. G. Pedersen 
+A smooth particle mesh Ewald method
+J. Chem. Phys. 103 (1995) pp. 8577-8592
+-------- -------- --- Thank You --- -------- --------
+
+Will do ordinary reciprocal space Ewald sum.
+Using a Gaussian width (1/beta) of 0.288146 nm for Ewald
+Cut-off's:   NS: 0.9   Coulomb: 0.9   LJ: 0.3479
+System total charge: 0.000
+Read user tables from Table_HS_modif.xvg with 1501 data points.
+Tabscale = 500 points/nm
+Generated table with 950 data points for Ewald.
+Tabscale = 500 points/nm
+Potential shift: LJ r^-12: 0.000e+00 r^-6: 0.000e+00, Ewald -0.000e+00
+Initialized non-bonded Ewald correction tables, spacing: 8.85e-04 size: 2148
+
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Initializing LINear Constraint Solver
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and H. Bekker and H. J. C. Berendsen and J. G. E. M. Fraaije
+LINCS: A Linear Constraint Solver for molecular simulations
+J. Comp. Chem. 18 (1997) pp. 1463-1472
+-------- -------- --- Thank You --- -------- --------
+
+The number of constraints is 6000
+
+Linking all bonded interactions to atoms
+
+Intra-simulation communication will occur every 10 steps.
+Center of mass motion removal mode is Linear
+We have the following groups for center of mass motion removal:
+  0:  rest
+There are: 12000 Atoms
+There are: 18000 VSites
+Atom distribution over 64 domains: av 468 stddev 45 min 345 max 545
+Grid: 4 x 4 x 15 cells
+Initial temperature: 177.416 K
+
+Started mdrun on rank 0 Sun Dec 29 18:53:54 2019
+
+DD  step 100500009 load imb.: force 16.7%
+
+Writing checkpoint, step 101382930 at Sun Dec 29 19:08:54 2019
+
+
+ (SR)   Coul. recip.      Potential    Kinetic En.
+    9.62877e+01   -1.02774e+06   -4.38739e+05   -1.46639e+06    2.21210e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44426e+06   -1.41968e+06    1.77387e+02    5.41383e+01    5.58756e-06
+
+	<======  ###############  ==>
+	<====  A V E R A G E S  ====>
+	<==  ###############  ======>
+
+	Statistics over 100500001 steps using 1005001 frames
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.09470e+02   -1.02785e+06   -4.38742e+05   -1.46648e+06    2.24219e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44406e+06   -1.43192e+06    1.79801e+02    5.75907e+01    0.00000e+00
+
+   Total Virial (kJ/mol)
+    3.05698e+03    1.04264e-01   -4.37659e-02
+    1.04261e-01    3.05660e+03   -4.32319e-02
+   -4.38516e-02   -4.32982e-02    3.05757e+03
+
+   Pressure (bar)
+    5.75825e+01   -2.95675e-03    1.20040e-03
+   -2.95671e-03    5.76016e+01    3.80613e-03
+    1.20152e-03    3.80700e-03    5.75880e+01
+
+
+	M E G A - F L O P S   A C C O U N T I N G
+
+ NB=Group-cutoff nonbonded kernels    NxN=N-by-N cluster Verlet kernels
+ RF=Reaction-Field  VdW=Van der Waals  QSTab=quadratic-spline table
+ W3=SPC/TIP3p  W4=TIP4p (single or pairs)
+ V&F=Potential and force  V=Potential only  F=Force only
+
+ Computing:                               M-Number         M-Flops  % Flops
+-----------------------------------------------------------------------------
+ NB VdW [V&F]                             2.929824           2.930     0.9
+ NB Elec. [V&F]                          12.034048          12.034     3.7
+ Calc Weights                             0.090000           3.240     1.0
+ Spread Q Bspline                         1.920000           3.840     1.2
+ Gather F Bspline                         1.920000          11.520     3.6
+ 3D-FFT                                  34.955720         279.646    86.3
+ Solve PME                                0.073728           4.719     1.5
+ NS-Pairs                                 0.106544           2.237     0.7
+ CG-CoM                                   0.030000           0.090     0.0
+ Virial                                   0.032880           0.592     0.2
+ Stop-CM                                  0.030000           0.300     0.1
+ Calc-Ekin                                0.060000           1.620     0.5
+ Lincs                                    0.006000           0.360     0.1
+ Constraint-V                             0.012000           0.096     0.0
+ Constraint-Vir                           0.006000           0.144     0.0
+ Virtual Site 2                           0.036000           0.828     0.3
+-----------------------------------------------------------------------------
+ Total                                                     324.195   100.0
+-----------------------------------------------------------------------------
+
+
+    D O M A I N   D E C O M P O S I T I O N   S T A T I S T I C S
+
+ av. #atoms communicated per step for force:  2 x 38220.0
+
+
+     R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
+
+On 64 MPI ranks
+
+ Computing:          Num   Num      Call    Wall time         Giga-Cycles
+                     Ranks Threads  Count      (s)         total sum    %
+-----------------------------------------------------------------------------
+ Vsite constr.         64    1          1       0.000          0.007   0.1
+ Neighbor search       64    1          1       0.000          0.055   0.6
+ Comm. coord.          64    1          1       0.000          0.008   0.1
+ Force                 64    1          1       0.000          0.038   0.4
+ Wait + Comm. F        64    1          1       0.000          0.020   0.2
+ PME mesh              64    1          1       0.053          8.883  96.3
+ Vsite spread          64    1          2       0.000          0.015   0.2
+ Update                64    1          1       0.000          0.020   0.2
+ Constraints           64    1          1       0.000          0.032   0.3
+ Comm. energies        64    1          1       0.000          0.038   0.4
+ Rest                                           0.001          0.105   1.1
+-----------------------------------------------------------------------------
+ Total                                          0.055          9.222 100.0
+-----------------------------------------------------------------------------
+ Breakdown of PME mesh computation
+-----------------------------------------------------------------------------
+ PME redist. X/F       64    1          2       0.000          0.068   0.7
+ PME spread/gather     64    1          2       0.000          0.075   0.8
+ PME 3D-FFT            64    1          2       0.018          2.972  32.2
+ PME 3D-FFT Comm.      64    1          4       0.034          5.744  62.3
+ PME solve Elec        64    1          1       0.000          0.016   0.2
+-----------------------------------------------------------------------------
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        3.540        0.055     6400.0
+                 (ns/day)    (hour/ns)
+Performance:        3.124        7.683
+Finished mdrun on rank 0 Tue Dec 24 14:09:35 2019
+-------
+ PME redist. X/F      128    1    1000002      27.333       9096.520   6.7
+ PME spread/gather    128    1    1000002      52.563      17492.974  12.8
+ PME 3D-FFT           128    1    1000002      59.241      19715.405  14.5
+ PME 3D-FFT Comm.     128    1    2000004     206.910      68859.813  50.6
+ PME solve Elec       128    1     500001       7.347       2445.012   1.8
+-----------------------------------------------------------------------------
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    52379.727      409.217    12800.0
+                 (ns/day)    (hour/ns)
+Performance:      211.136        0.114
+Finished mdrun on rank 0 Tue Dec 17 10:11:16 2019
+Writing checkpoint, step 102267930 at Sun Dec 29 19:23:54 2019
+
+
+Writing checkpoint, step 103153190 at Sun Dec 29 19:38:54 2019
+
+
+Writing checkpoint, step 104030820 at Sun Dec 29 19:53:54 2019
+
+
+Writing checkpoint, step 104916370 at Sun Dec 29 20:08:54 2019
+
+
+Writing checkpoint, step 105803170 at Sun Dec 29 20:23:54 2019
+
+
+Writing checkpoint, step 106689540 at Sun Dec 29 20:38:54 2019
+
+
+Writing checkpoint, step 107576360 at Sun Dec 29 20:53:54 2019
+
+
+Writing checkpoint, step 108462500 at Sun Dec 29 21:08:54 2019
+
+
+Writing checkpoint, step 109349020 at Sun Dec 29 21:23:54 2019
+
+
+DD  step 109999999 load imb.: force 17.8%
+
+           Step           Time
+      110000000   220000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.18661e+02   -1.02786e+06   -4.38747e+05   -1.46649e+06    2.25185e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44397e+06   -1.41734e+06    1.80575e+02    6.01975e+01    5.54742e-06
+
+Writing checkpoint, step 110235590 at Sun Dec 29 21:38:54 2019
+
+
+Writing checkpoint, step 111123200 at Sun Dec 29 21:53:54 2019
+
+
+Writing checkpoint, step 111997880 at Sun Dec 29 22:08:54 2019
+
+
+Writing checkpoint, step 112885050 at Sun Dec 29 22:23:54 2019
+
+
+Writing checkpoint, step 113772330 at Sun Dec 29 22:38:54 2019
+
+
+Writing checkpoint, step 114660220 at Sun Dec 29 22:53:54 2019
+
+
+Writing checkpoint, step 115547270 at Sun Dec 29 23:08:54 2019
+
+
+Writing checkpoint, step 116435350 at Sun Dec 29 23:23:54 2019
+
+
+Writing checkpoint, step 117322980 at Sun Dec 29 23:38:54 2019
+
+
+Writing checkpoint, step 118210590 at Sun Dec 29 23:53:54 2019
+
+
+Writing checkpoint, step 119097860 at Mon Dec 30 00:08:54 2019
+
+
+Writing checkpoint, step 119950500 at Mon Dec 30 00:23:54 2019
+
+
+DD  step 119999999 load imb.: force 25.0%
+
+           Step           Time
+      120000000   240000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.40208e+02   -1.02785e+06   -4.38742e+05   -1.46645e+06    2.24081e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44404e+06   -1.41491e+06    1.79690e+02    6.39001e+01    5.52595e-06
+
+Writing checkpoint, step 120838040 at Mon Dec 30 00:38:54 2019
+
+
+Writing checkpoint, step 121725600 at Mon Dec 30 00:53:54 2019
+
+
+Writing checkpoint, step 122613580 at Mon Dec 30 01:08:54 2019
+
+
+Writing checkpoint, step 123499980 at Mon Dec 30 01:23:54 2019
+
+
+Writing checkpoint, step 124388430 at Mon Dec 30 01:38:54 2019
+
+
+Writing checkpoint, step 125276890 at Mon Dec 30 01:53:54 2019
+
+
+Writing checkpoint, step 126165310 at Mon Dec 30 02:08:54 2019
+
+
+Writing checkpoint, step 127054340 at Mon Dec 30 02:23:54 2019
+
+
+Writing checkpoint, step 127887230 at Mon Dec 30 02:38:54 2019
+
+
+Writing checkpoint, step 128775790 at Mon Dec 30 02:53:54 2019
+
+
+Writing checkpoint, step 129664350 at Mon Dec 30 03:08:54 2019
+
+
+DD  step 129999999 load imb.: force 22.6%
+
+           Step           Time
+      130000000   260000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    9.46647e+01   -1.02786e+06   -4.38744e+05   -1.46651e+06    2.27432e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44376e+06   -1.41250e+06    1.82376e+02    5.41010e+01    5.51491e-06
+
+Writing checkpoint, step 130551900 at Mon Dec 30 03:23:54 2019
+
+
+Writing checkpoint, step 131440730 at Mon Dec 30 03:38:54 2019
+
+
+Writing checkpoint, step 132329530 at Mon Dec 30 03:53:54 2019
+
+
+Writing checkpoint, step 133217950 at Mon Dec 30 04:08:54 2019
+
+
+Writing checkpoint, step 134106760 at Mon Dec 30 04:23:54 2019
+
+
+Writing checkpoint, step 134995130 at Mon Dec 30 04:38:54 2019
+
+
+Writing checkpoint, step 135883960 at Mon Dec 30 04:53:54 2019
+
+
+Writing checkpoint, step 136772430 at Mon Dec 30 05:08:54 2019
+
+
+Writing checkpoint, step 137660850 at Mon Dec 30 05:23:54 2019
+
+
+Writing checkpoint, step 138549250 at Mon Dec 30 05:38:54 2019
+
+
+Writing checkpoint, step 139438080 at Mon Dec 30 05:53:54 2019
+
+
+DD  step 139999999 load imb.: force 18.8%
+
+           Step           Time
+      140000000   280000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    8.77153e+01   -1.02785e+06   -4.38778e+05   -1.46654e+06    2.25115e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44403e+06   -1.41009e+06    1.80519e+02    5.19690e+01    5.47805e-06
+
+Writing checkpoint, step 140327140 at Mon Dec 30 06:08:54 2019
+
+
+Writing checkpoint, step 141215780 at Mon Dec 30 06:23:54 2019
+
+
+Writing checkpoint, step 142104420 at Mon Dec 30 06:38:54 2019
+
+
+Writing checkpoint, step 142993380 at Mon Dec 30 06:53:54 2019
+
+
+Writing checkpoint, step 143882480 at Mon Dec 30 07:08:54 2019
+
+
+Writing checkpoint, step 144771750 at Mon Dec 30 07:23:54 2019
+
+
+Writing checkpoint, step 145660900 at Mon Dec 30 07:38:54 2019
+
+
+Writing checkpoint, step 146549920 at Mon Dec 30 07:53:54 2019
+
+
+Writing checkpoint, step 147437560 at Mon Dec 30 08:08:54 2019
+
+
+Writing checkpoint, step 148325750 at Mon Dec 30 08:23:54 2019
+
+
+Writing checkpoint, step 149213690 at Mon Dec 30 08:38:54 2019
+
+
+DD  step 149999999 load imb.: force 31.2%
+
+           Step           Time
+      150000000   300000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.11817e+02   -1.02780e+06   -4.38719e+05   -1.46640e+06    2.23861e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44402e+06   -1.40764e+06    1.79513e+02    5.77266e+01    5.49184e-06
+
+Writing checkpoint, step 150100710 at Mon Dec 30 08:53:54 2019
+
+
+Writing checkpoint, step 150988050 at Mon Dec 30 09:08:54 2019
+
+
+Writing checkpoint, step 151876560 at Mon Dec 30 09:23:54 2019
+
+
+Writing checkpoint, step 152764400 at Mon Dec 30 09:38:54 2019
+
+
+Writing checkpoint, step 153651060 at Mon Dec 30 09:53:54 2019
+
+
+Writing checkpoint, step 154537960 at Mon Dec 30 10:08:54 2019
+
+
+Writing checkpoint, step 155425660 at Mon Dec 30 10:23:54 2019
+
+
+Writing checkpoint, step 156314050 at Mon Dec 30 10:38:54 2019
+
+
+Writing checkpoint, step 157159360 at Mon Dec 30 10:53:54 2019
+
+
+Writing checkpoint, step 158046560 at Mon Dec 30 11:08:54 2019
+
+
+Writing checkpoint, step 158933620 at Mon Dec 30 11:23:54 2019
+
+
+Writing checkpoint, step 159821390 at Mon Dec 30 11:38:54 2019
+
+
+DD  step 159999999 load imb.: force 27.1%
+
+           Step           Time
+      160000000   320000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.11728e+02   -1.02788e+06   -4.38794e+05   -1.46656e+06    2.23724e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44419e+06   -1.40519e+06    1.79404e+02    5.79568e+01    5.46529e-06
+
+Writing checkpoint, step 160709370 at Mon Dec 30 11:53:54 2019
+
+
+Writing checkpoint, step 161596550 at Mon Dec 30 12:08:54 2019
+
+
+Writing checkpoint, step 162484700 at Mon Dec 30 12:23:54 2019
+
+
+Writing checkpoint, step 163372330 at Mon Dec 30 12:38:54 2019
+
+
+Writing checkpoint, step 164260540 at Mon Dec 30 12:53:54 2019
+
+
+Writing checkpoint, step 165147340 at Mon Dec 30 13:08:54 2019
+
+
+Writing checkpoint, step 166034900 at Mon Dec 30 13:23:54 2019
+
+
+Writing checkpoint, step 166921870 at Mon Dec 30 13:38:54 2019
+
+
+Writing checkpoint, step 167808810 at Mon Dec 30 13:53:54 2019
+
+
+Writing checkpoint, step 168696820 at Mon Dec 30 14:08:54 2019
+
+
+Writing checkpoint, step 169584140 at Mon Dec 30 14:23:54 2019
+
+
+DD  step 169999999 load imb.: force 62.3%
+
+           Step           Time
+      170000000   340000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.07898e+02   -1.02786e+06   -4.38700e+05   -1.46645e+06    2.23974e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44405e+06   -1.40271e+06    1.79604e+02    5.76350e+01    5.58763e-06
+
+Writing checkpoint, step 170471690 at Mon Dec 30 14:38:54 2019
+
+
+Writing checkpoint, step 171359530 at Mon Dec 30 14:53:54 2019
+
+
+Writing checkpoint, step 172246270 at Mon Dec 30 15:08:54 2019
+
+
+Writing checkpoint, step 173134040 at Mon Dec 30 15:23:54 2019
+
+
+Writing checkpoint, step 174022020 at Mon Dec 30 15:38:54 2019
+
+
+Writing checkpoint, step 174910350 at Mon Dec 30 15:53:54 2019
+
+
+Writing checkpoint, step 175798860 at Mon Dec 30 16:08:54 2019
+
+
+Writing checkpoint, step 176687500 at Mon Dec 30 16:23:54 2019
+
+
+Writing checkpoint, step 177570150 at Mon Dec 30 16:38:54 2019
+
+
+Writing checkpoint, step 178457590 at Mon Dec 30 16:53:54 2019
+
+
+Writing checkpoint, step 179336250 at Mon Dec 30 17:08:54 2019
+
+
+DD  step 179999999 load imb.: force 32.2%
+
+           Step           Time
+      180000000   360000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.29987e+02   -1.02774e+06   -4.38625e+05   -1.46624e+06    2.25618e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44368e+06   -1.40028e+06    1.80922e+02    6.39481e+01    5.55166e-06
+
+Writing checkpoint, step 180223500 at Mon Dec 30 17:23:54 2019
+
+
+Writing checkpoint, step 181111110 at Mon Dec 30 17:38:54 2019
+
+
+Writing checkpoint, step 181998750 at Mon Dec 30 17:53:54 2019
+
+
+Writing checkpoint, step 182873350 at Mon Dec 30 18:08:54 2019
+
+
+Writing checkpoint, step 183754400 at Mon Dec 30 18:23:54 2019
+
+
+Writing checkpoint, step 184642570 at Mon Dec 30 18:38:54 2019
+
+
+Writing checkpoint, step 185530460 at Mon Dec 30 18:53:54 2019
+
+
+Writing checkpoint, step 186413190 at Mon Dec 30 19:08:54 2019
+
+
+Writing checkpoint, step 187297160 at Mon Dec 30 19:23:54 2019
+
+
+Writing checkpoint, step 188185110 at Mon Dec 30 19:38:54 2019
+
+
+Writing checkpoint, step 189073090 at Mon Dec 30 19:53:54 2019
+
+
+Writing checkpoint, step 189959660 at Mon Dec 30 20:08:54 2019
+
+
+DD  step 189999999 load imb.: force 21.9%
+
+           Step           Time
+      190000000   380000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    9.33718e+01   -1.02778e+06   -4.38679e+05   -1.46636e+06    2.24585e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44390e+06   -1.39785e+06    1.80094e+02    5.47998e+01    5.51483e-06
+
+Writing checkpoint, step 190847710 at Mon Dec 30 20:23:54 2019
+
+
+Writing checkpoint, step 191733720 at Mon Dec 30 20:38:54 2019
+
+
+Writing checkpoint, step 192617230 at Mon Dec 30 20:53:54 2019
+
+
+
+
+-----------------------------------------------------------
+Restarting from checkpoint, appending to previous log file.
+
+Log file opened on Tue Dec 31 14:48:17 2019
+Host: r3i1n0  pid: 18316  rank ID: 0  number of ranks:  128
+                        :-) GROMACS - mdrun, 2016.1 (-:
+
+Executable:   /sw/sdev/Modules/gromacs/gromacs-2016.1/bin/mdrun
+Data prefix:  /sw/sdev/Modules/gromacs/gromacs-2016.1
+Working dir:  /work/pousaneh/0.377-BIG/V12
+Command line:
+  mdrun -s NVT.tpr -deffnm NVT -append -cpi NVT.cpt -table Table_HS_modif.xvg
+
+GROMACS version:    2016.1
+Precision:          single
+Memory model:       64 bit
+MPI library:        MPI
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 32)
+GPU support:        disabled
+SIMD instructions:  AVX_256
+FFT library:        Intel MKL
+RDTSCP usage:       disabled
+TNG support:        enabled
+Hwloc support:      disabled
+Tracing support:    disabled
+Built on:           Thu Jan 12 07:55:47 CET 2017
+Built by:           vegarde@service0 [CMAKE]
+Build OS/arch:      Linux 3.0.101-84-default x86_64
+Build CPU vendor:   Unknown
+Build CPU brand:    Unknown
+Build CPU family:   0   Model: 0   Stepping: 0
+Build CPU features: Unknown
+C compiler:         /sw/sdev/Modules/intelcomp/17.0/bin/icc Intel 17.0.0.20160721
+C compiler flags:    -mavx   -mkl=sequential  -std=gnu99  -O3 -xHost -DNDEBUG -ip -funroll-all-loops -alias-const -ansi-alias  
+C++ compiler:       /sw/sdev/Modules/intelcomp/17.0/bin/icpc Intel 17.0.0.20160721
+C++ compiler flags:  -mavx    -std=c++0x   -O3 -xHost -DNDEBUG -ip -funroll-all-loops -alias-const -ansi-alias  
+
+
+Initializing Domain Decomposition on 128 ranks
+Dynamic load balancing: auto
+Guess for relative PME load: 0.93
+Using 0 separate PME ranks, as guessed by mdrun
+Scaling the initial minimum size with 1/0.8 (option -dds) = 1.25
+Optimizing the DD grid for 128 cells with a minimum initial size of 0.000 nm
+Domain decomposition grid 16 x 8 x 1, separate PME ranks 0
+PME domain decomposition: 16 x 8 x 1
+Domain decomposition rank 0, coordinates 0 0 0
+
+The initial number of communication pulses is: X 2 Y 1
+The initial domain decomposition cell size is: X 0.85 nm Y 1.71 nm
+
+When dynamic load balancing gets turned on, these settings will change to:
+The maximum number of communication pulses is: X 2 Y 2
+The minimum size for domain decomposition cells is 0.450 nm
+The requested allowed shrink of DD cells (option -dds) is: 0.80
+The allowed shrink of domain decomposition cells is: X 0.53 Y 0.26
+Using two step summing over 8 groups of on average 16.0 ranks
+
+Using 128 MPI processes
+
+
+NOTE: This file uses the deprecated 'group' cutoff_scheme. This will be
+removed in a future release when 'verlet' supports all interaction forms.
+
+Table routines are used for coulomb: false
+Table routines are used for vdw:     true
+Will do PME sum in reciprocal space for electrostatic interactions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+U. Essmann, L. Perera, M. L. Berkowitz, T. Darden, H. Lee and L. G. Pedersen 
+A smooth particle mesh Ewald method
+J. Chem. Phys. 103 (1995) pp. 8577-8592
+-------- -------- --- Thank You --- -------- --------
+
+Will do ordinary reciprocal space Ewald sum.
+Using a Gaussian width (1/beta) of 0.288146 nm for Ewald
+Cut-off's:   NS: 0.9   Coulomb: 0.9   LJ: 0.3479
+System total charge: 0.000
+Read user tables from Table_HS_modif.xvg with 1501 data points.
+Tabscale = 500 points/nm
+Generated table with 950 data points for Ewald.
+Tabscale = 500 points/nm
+Potential shift: LJ r^-12: 0.000e+00 r^-6: 0.000e+00, Ewald -0.000e+00
+Initialized non-bonded Ewald correction tables, spacing: 8.85e-04 size: 2148
+
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Initializing LINear Constraint Solver
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and H. Bekker and H. J. C. Berendsen and J. G. E. M. Fraaije
+LINCS: A Linear Constraint Solver for molecular simulations
+J. Comp. Chem. 18 (1997) pp. 1463-1472
+-------- -------- --- Thank You --- -------- --------
+
+The number of constraints is 6000
+
+Linking all bonded interactions to atoms
+
+Intra-simulation communication will occur every 10 steps.
+Center of mass motion removal mode is Linear
+We have the following groups for center of mass motion removal:
+  0:  rest
+There are: 12000 Atoms
+There are: 18000 VSites
+Atom distribution over 128 domains: av 234 stddev 35 min 150 max 300
+Grid: 5 x 4 x 15 cells
+Initial temperature: 181.899 K
+
+Started mdrun on rank 0 Tue Dec 31 14:48:17 2019
+
+DD  step 192617239 load imb.: force 28.6%
+
+Writing checkpoint, step 193724650 at Tue Dec 31 15:03:17 2019
+
+
+Writing checkpoint, step 194768960 at Tue Dec 31 15:18:17 2019
+
+
+Writing checkpoint, step 195874810 at Tue Dec 31 15:33:17 2019
+
+
+Writing checkpoint, step 196985520 at Tue Dec 31 15:48:17 2019
+
+
+Writing checkpoint, step 198085140 at Tue Dec 31 16:03:17 2019
+
+
+Writing checkpoint, step 199184860 at Tue Dec 31 16:18:17 2019
+
+
+DD  step 199999999 load imb.: force 26.4%
+
+           Step           Time
+      200000000   400000.00000
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.23630e+02   -1.02783e+06   -4.38700e+05   -1.46640e+06    2.23070e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44410e+06   -1.39542e+06    1.78879e+02    6.11970e+01    5.48220e-06
+
+Writing checkpoint, step 200291340 at Tue Dec 31 16:33:17 2019
+
+
+DD  step 200499999 load imb.: force 28.6%
+
+           Step           Time
+      200500000   401000.00000
+
+Writing checkpoint, step 200500000 at Tue Dec 31 16:36:07 2019
+
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.15416e+02   -1.02790e+06   -4.38796e+05   -1.46658e+06    2.25230e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44406e+06   -1.39530e+06    1.80611e+02    5.88477e+01    5.53062e-06
+
+	<======  ###############  ==>
+	<====  A V E R A G E S  ====>
+	<==  ###############  ======>
+
+	Statistics over 200500001 steps using 2005001 frames
+
+   Energies (kJ/mol)
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    1.09476e+02   -1.02785e+06   -4.38742e+05   -1.46648e+06    2.24220e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.44406e+06   -1.41974e+06    1.79801e+02    5.75931e+01    0.00000e+00
+
+   Total Virial (kJ/mol)
+    3.05675e+03    9.99784e-02   -7.72120e-02
+    9.99624e-02    3.05657e+03    1.07541e-01
+   -7.71989e-02    1.07566e-01    3.05739e+03
+
+   Pressure (bar)
+    5.75940e+01   -6.27301e-04    2.67582e-03
+   -6.27093e-04    5.75980e+01    3.48747e-03
+    2.67565e-03    3.48715e-03    5.75873e+01
+
+
+	M E G A - F L O P S   A C C O U N T I N G
+
+ NB=Group-cutoff nonbonded kernels    NxN=N-by-N cluster Verlet kernels
+ RF=Reaction-Field  VdW=Van der Waals  QSTab=quadratic-spline table
+ W3=SPC/TIP3p  W4=TIP4p (single or pairs)
+ V&F=Potential and force  V=Potential only  F=Force only
+
+ Computing:                               M-Number         M-Flops  % Flops
+-----------------------------------------------------------------------------
+ NB VdW [V&F]                        243977.937091      243977.937     0.0
+ NB VdW [F]                        20762861.061248    20762861.061     0.8
+ NB Elec. [V&F]                      972076.210552      972076.211     0.0
+ NB Elec. [F]                      64706539.128669    64706539.129     2.6
+ Calc Weights                        709449.390000    25540178.040     1.0
+ Spread Q Bspline                  15134920.320000    30269840.640     1.2
+ Gather F Bspline                  15134920.320000    90809521.920     3.7
+ 3D-FFT                           275547935.900120  2204383487.201    88.7
+ Solve PME                           581180.940288    37195580.178     1.5
+ NS-Pairs                             68910.885365     1447128.593     0.1
+ Reset In Box                          4729.662000       14188.986     0.0
+ CG-CoM                               23648.340000       70945.020     0.0
+ Virial                                2818.889280       50740.007     0.0
+ Stop-CM                               2364.840000       23648.400     0.0
+ Calc-Ekin                            47296.680000     1277010.360     0.1
+ Lincs                                47296.626000     2837797.560     0.1
+ Constraint-V                         94593.252000      756746.016     0.0
+ Constraint-Vir                         472.968000       11351.232     0.0
+ Virtual Site 2                      143308.782000     3296101.986     0.1
+-----------------------------------------------------------------------------
+ Total                                              2484669720.477   100.0
+-----------------------------------------------------------------------------
+
+
+    D O M A I N   D E C O M P O S I T I O N   S T A T I S T I C S
+
+ av. #atoms communicated per step for force:  2 x 60557.4
+
+ Average load imbalance: 35.6 %
+ Part of the total run time spent waiting due to load imbalance: 0.9 %
+
+
+     R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
+
+On 128 MPI ranks
+
+ Computing:          Num   Num      Call    Wall time         Giga-Cycles
+                     Ranks Threads  Count      (s)         total sum    %
+-----------------------------------------------------------------------------
+ Domain decomp.       128    1     788277     102.364      34066.985   1.6
+ DD comm. load        128    1       7886       0.024          8.132   0.0
+ Vsite constr.        128    1    7882771      17.757       5909.456   0.3
+ Neighbor search      128    1     788278      66.533      22142.476   1.0
+ Comm. coord.         128    1    7882771     155.581      51777.769   2.4
+ Force                128    1    7882771     181.182      60297.804   2.8
+ Wait + Comm. F       128    1    7882771     147.858      49207.598   2.3
+ PME mesh             128    1    7882771    5541.901    1844355.354  85.5
+ Vsite spread         128    1    7961599      20.110       6692.731   0.3
+ Write traj.          128    1          9       0.747        248.634   0.0
+ Update               128    1    7882771      38.382      12773.679   0.6
+ Constraints          128    1    7882771      40.323      13419.539   0.6
+ Comm. energies       128    1     788278     129.587      43126.968   2.0
+ Rest                                          40.760      13565.172   0.6
+-----------------------------------------------------------------------------
+ Total                                       6483.112    2157592.298 100.0
+-----------------------------------------------------------------------------
+ Breakdown of PME mesh computation
+-----------------------------------------------------------------------------
+ PME redist. X/F      128    1   15765542     420.021     139783.852   6.5
+ PME spread/gather    128    1   15765542     821.701     273463.793  12.7
+ PME 3D-FFT           128    1   15765542     931.912     310142.036  14.4
+ PME 3D-FFT Comm.     128    1   31531084    3232.880    1075908.734  49.9
+ PME solve Elec       128    1    7882771     115.905      38573.480   1.8
+-----------------------------------------------------------------------------
+
+               Core t (s)   Wall t (s)        (%)
+       Time:   829838.314     6483.112    12800.0
+                         1h48:03
+                 (ns/day)    (hour/ns)
+Performance:      210.106        0.114
+Finished mdrun on rank 0 Tue Dec 31 16:36:20 2019
